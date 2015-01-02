@@ -62,14 +62,20 @@ function StringBuilder() {
         //items.splice(0, items.length);
         return this;
     };
-    
+
+    /**
+     * @return {string}
+     */
     this.ToString = function() {
         if (items.length > 0) {
           return items.join(''); 
         }
         return '';
     };
-    
+
+    /**
+     * @return {string}
+     */
     this.ToString2 = function() {
         var result = '';
         
@@ -81,6 +87,9 @@ function StringBuilder() {
     };
 };
 
+/**
+ * @return {string}
+ */
 StringBuilder.prototype.Version = function() {
     return '1.0';
 }

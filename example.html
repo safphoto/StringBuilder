@@ -51,9 +51,12 @@
         //
         // USAGE EXAMPLES
         //
-        
+
+        /**
+         * @return {string}
+         */
         function BaseUsage() {
-            var sb = new StringBuilder();
+            var sb = new SAF.StringBuilder();
             
             sb.Append('Scott ');
             sb.AppendLine('Flaherty');
@@ -61,18 +64,24 @@
             
             return sb.ToString();
         }
-        
+
+        /**
+         * @return {string}
+         */
         function UsingMethodChaining() {
-            var sb = new StringBuilder();
+            var sb = new SAF.StringBuilder();
             
             return result = sb.Append('Scott ')
                 .AppendLine('Flaherty')
                 .AppendLine('Photography')
                 .ToString();
         }
-        
+
+        /**
+         * @return {string}
+         */
         function UsingAppendFormatAndChaining() {
-            var sb = new StringBuilder();
+            var sb = new SAF.StringBuilder();
             var format = '{0} {1}';
             
             return sb.AppendFormat(format, 'Introducing:', 'Scott ')
@@ -80,9 +89,12 @@
                 .AppendLine('Photography')
                 .ToString();
         }
-        
+
+        /**
+         * @return {string}
+         */
         function UsingRemove() {
-            var sb = new StringBuilder();
+            var sb = new SAF.StringBuilder();
             
             return sb.Append('Introducing: ')
                 .AppendLine('Scott Flaherty')
@@ -90,9 +102,12 @@
                 .Remove('Introducing: ')
                 .ToString();
         }
-        
+
+        /**
+         * @return {string}
+         */
         function UsingRemoveLine() {
-            var sb = new StringBuilder();
+            var sb = new SAF.StringBuilder();
             
             return sb.AppendLine('Scott Flaherty')
                 .AppendLine('World Class')
@@ -100,9 +115,12 @@
                 .RemoveLine('World Class')
                 .ToString();
         }
-        
+
+        /**
+         * @return {string}
+         */
         function UsingClear() {
-            var sb = new StringBuilder();
+            var sb = new SAF.StringBuilder();
             
             var appendedString = sb.Append('Scott ')
                 .AppendLine('Flaherty')

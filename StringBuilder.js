@@ -4,21 +4,21 @@ var SAF = SAF || {};
 SAF.StringBuilder = function () {
     var items = [];
 
-    this.Append = function (value) {
+    this.append = function (value) {
         if (value || value === 0) {
             items.push(value);
         }
         return this;
     };
 
-    this.AppendLine = function (value) {
+    this.appendLine = function (value) {
         if (value || value === 0) {
             items.push(value + '\n');
         }
         return this;
     };
 
-    this.AppendFormat = function () {
+    this.appendFormat = function () {
         var value = arguments[0];
 
         for (var i = 0; i < arguments.length; i++) {
@@ -32,7 +32,7 @@ SAF.StringBuilder = function () {
         return this;
     };
 
-    this.Remove = function (value) {
+    this.remove = function (value) {
         if (value || value === 0) {
             var args = arguments;
             var ax;
@@ -45,7 +45,7 @@ SAF.StringBuilder = function () {
         return this;
     };
 
-    this.RemoveLine = function (value) {
+    this.removeLine = function (value) {
         if (value || value === 0) {
             var ax;
             var target = value + '\n';
@@ -58,7 +58,7 @@ SAF.StringBuilder = function () {
         return this;
     };
 
-    this.Clear = function () {
+    this.clear = function () {
         while (items.length > 0) {
             items.pop();
         }
@@ -69,7 +69,7 @@ SAF.StringBuilder = function () {
     /**
      * @return {string}
      */
-    this.ToString = function () {
+    this.toString = function () {
         if (items.length > 0) {
             return items.join('');
         }
@@ -79,7 +79,7 @@ SAF.StringBuilder = function () {
     /**
      * @return {string}
      */
-    this.ToString2 = function () {
+    this.toString2 = function () {
         var result = '';
 
         for (i = 0; i < items.length; i++) {
@@ -93,6 +93,6 @@ SAF.StringBuilder = function () {
 /**
  * @return {string}
  */
-SAF.StringBuilder.prototype.Version = function () {
+SAF.StringBuilder.prototype.version = function () {
     return '1.0';
 };

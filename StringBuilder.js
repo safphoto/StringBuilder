@@ -1,8 +1,8 @@
-'use strict';
-
 var SAF = SAF || {};
 
 SAF.StringBuilder = function () {
+    'use strict';
+
     var items = [];
 
     this.append = function (value) {
@@ -83,7 +83,7 @@ SAF.StringBuilder = function () {
     this.toString2 = function () {
         var result = '';
 
-        for (i = 0; i < items.length; i++) {
+        for (var i = 0; i < items.length; i++) {
             result += items[i];
         }
 
@@ -95,5 +95,6 @@ SAF.StringBuilder = function () {
  * @return {string}
  */
 SAF.StringBuilder.prototype.version = function () {
+    'use strict';
     return '1.0';
 };
